@@ -53,13 +53,13 @@ export default function Home() {
 
           <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight text-zinc-900 dark:text-white">
             Catatan Belajar, <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">
               Disimpan Rapi.
             </span>
           </h1>
           
-          <p className="text-lg sm:text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-4xl mx-auto">
-            Kumpulan materi kuliah, tutorial koding, dsb hehe.<br/>Ditulis dengan format yang rapi. Cepat, mudah dibaca, dan terstruktur.
+          <p className="text-sm sm:text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-4xl mx-auto">
+            Kumpulan materi kuliah, tutorial koding, dsb hehe.<br/>Ditulis dengan format yang rapi, mudah dibaca, dan terstruktur.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
