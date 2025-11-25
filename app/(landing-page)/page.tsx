@@ -1,6 +1,6 @@
 import Link from "next/link";
 // Sesuaikan path import ini dengan lokasi file komponen kamu
-import { ThemeToggle } from "@/components/theme-toggle"; 
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Home() {
   return (
@@ -29,10 +29,10 @@ export default function Home() {
           </svg>
           <span>Fyy's Notebook</span>
         </div>
-        
+
         <nav className="flex items-center gap-4">
-          <Link 
-            href="https://github.com/fyydsz" 
+          <Link
+            href="https://github.com/fyydsz"
             target="_blank"
             className="text-sm font-medium text-zinc-500 hover:text-black dark:text-zinc-400 dark:hover:text-white transition-colors hidden sm:block"
           >
@@ -46,7 +46,7 @@ export default function Home() {
       <main className="flex-1 flex flex-col items-center justify-center px-6 text-center py-20">
         <div className="max-w-2xl space-y-8">
           {/* Badge kecil (Optional, memberikan kesan modern) */}
-          <div className="inline-flex items-center rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-sm text-zinc-800 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200 mb-4">
+          <div className="inline-flex items-center rounded-full border border-zinc-200 bg-zinc-50 px-2 py-0.5 text-xs sm:px-3 sm:py-1 sm:text-sm text-zinc-800 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200 mb-4">
             <span className="flex h-2 w-2 rounded-full bg-green-500 mr-2 animate-pulse"></span>
             Digital Garden & Documentation
           </div>
@@ -57,25 +57,25 @@ export default function Home() {
               Disimpan Rapi.
             </span>
           </h1>
-          
+
           <p className="text-sm sm:text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-4xl mx-auto">
-            Kumpulan materi kuliah, tutorial koding, dsb hehe.<br/>Ditulis dengan format yang rapi, mudah dibaca, dan terstruktur.
+            Kumpulan materi kuliah, tutorial koding, dsb hehe.<br />Ditulis dengan format yang rapi, mudah dibaca, dan terstruktur.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
             <Link
               href="/docs"
-              className="h-12 px-8 rounded-full bg-black dark:bg-white text-white dark:text-black font-medium flex items-center justify-center hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all active:scale-95"
+              className="h-10 px-6 text-sm sm:h-12 sm:px-8 sm:text-base rounded-full bg-black dark:bg-white text-white dark:text-black font-medium flex items-center justify-center hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all active:scale-95"
             >
               Mulai Membaca
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
             </Link>
           </div>
         </div>
       </main>
 
       {/* Footer Minimalis */}
-      <footer className="py-8 text-center text-sm text-zinc-500 dark:text-zinc-400">
+      <footer className="py-4 sm:py-8 text-center text-xs sm:text-sm text-zinc-500 dark:text-zinc-400">
         <p>© {new Date().getFullYear()} Fyy's Notebook. Built with Next.js & Nextra.</p>
       </footer>
     </div>
