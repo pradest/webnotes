@@ -1,14 +1,24 @@
-const BINDO: Record<string, string> = {
-  sejarah_bahasa_indonesia: 'Sejarah & Perkembangan',
-  kedudukan_fungsi: 'Kedudukan & Fungsi Bahasa'
+const BAHASA_INDONESIA: Record<string, string> = {
+  sejarah_bahasa_indonesia: '',
+  kedudukan_fungsi: ''
+}
+
+const LOGIKA_MATEMATIKA: Record<string, string> = {
+  proposisi: '',
+  tabel_kebenaran: ''
 }
 
 const DOCS_ITEMS: Record<string, any> = {
-  tentang: 'Tentang Penulis',
+  index: "Welcome",
+  tentang: '',
   bahasa_indonesia: {
     title: "Bahasa Indonesia",
-    items: BINDO
-  }
+    items: BAHASA_INDONESIA
+  },
+  logika_matematika: {
+    title: "Logika Matematika",
+    items: LOGIKA_MATEMATIKA
+  } 
 }
 
 export default {
