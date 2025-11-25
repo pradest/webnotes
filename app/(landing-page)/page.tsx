@@ -1,65 +1,90 @@
-import Image from "next/image";
+import Link from "next/link";
+// Sesuaikan path import ini dengan lokasi file komponen kamu
+import { ThemeToggle } from "@/components/theme-toggle"; 
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="flex min-h-screen flex-col">
+      {/* Header / Navigation */}
+      <header className="w-full max-w-5xl mx-auto p-6 flex items-center justify-between">
+        <div className="flex items-center gap-2 font-bold text-lg tracking-tight">
+          {/* Logo Icon Sederhana */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M2 6h4" />
+            <path d="M2 10h4" />
+            <path d="M2 14h4" />
+            <path d="M2 18h4" />
+            <rect width="16" height="20" x="4" y="2" rx="2" />
+            <path d="M16 2v20" />
+          </svg>
+          <span>Fyy's Notebook</span>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+        
+        <nav className="flex items-center gap-4">
+          <Link 
+            href="https://github.com/fyydsz" 
             target="_blank"
-            rel="noopener noreferrer"
+            className="text-sm font-medium text-zinc-500 hover:text-black dark:text-zinc-400 dark:hover:text-white transition-colors hidden sm:block"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            GitHub
+          </Link>
+          <ThemeToggle />
+        </nav>
+      </header>
+
+      {/* Main Content */}
+      <main className="flex-1 flex flex-col items-center justify-center px-6 text-center py-20">
+        <div className="max-w-2xl space-y-8">
+          {/* Badge kecil (Optional, memberikan kesan modern) */}
+          <div className="inline-flex items-center rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-sm text-zinc-800 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200 mb-4">
+            <span className="flex h-2 w-2 rounded-full bg-green-500 mr-2 animate-pulse"></span>
+            Digital Garden & Documentation
+          </div>
+
+          <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight text-zinc-900 dark:text-white">
+            Catatan Belajar, <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">
+              Disimpan Rapi.
+            </span>
+          </h1>
+          
+          <p className="text-lg sm:text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-4xl mx-auto">
+            Kumpulan materi kuliah, tutorial koding, dsb hehe.<br/>Ditulis dengan format yang rapi. Cepat, mudah dibaca, dan terstruktur.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+            <Link
+              href="/docs"
+              className="h-12 px-8 rounded-full bg-black dark:bg-white text-white dark:text-black font-medium flex items-center justify-center hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all active:scale-95"
+            >
+              Mulai Membaca
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </Link>
+            
+            <Link
+              href="/docs/tentang"
+              className="h-12 px-8 rounded-full border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-900 text-zinc-900 dark:text-white font-medium flex items-center justify-center transition-all"
+            >
+              Tentang Penulis
+            </Link>
+          </div>
         </div>
       </main>
+
+      {/* Footer Minimalis */}
+      <footer className="py-8 text-center text-sm text-zinc-500 dark:text-zinc-400">
+        <p>© {new Date().getFullYear()} Fyy's Notebook. Built with Next.js & Nextra.</p>
+      </footer>
     </div>
   );
 }
