@@ -12,6 +12,7 @@
     "postbuild": "pagefind --site .next/server/app --output-path public/_pagefind"
   },
   "dependencies": {
+    "katex": "^0.16.25",
     "next": "16.0.4",
     "next-themes": "^0.4.6",
     "nextra": "^4.6.0",

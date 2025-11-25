@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
 };
 
 const withNextra = nextra({
-  contentDirBasePath: '/docs', // Or even nested e.g. `/docs/advanced`
+  contentDirBasePath: '/docs',
+  latex: true // Or even nested e.g. `/docs/advanced`
 })
 export default withNextra(nextConfig);
