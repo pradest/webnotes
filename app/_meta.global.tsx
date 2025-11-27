@@ -12,6 +12,11 @@ const LOGIKA_MATEMATIKA: Record<string, string> = {
   tabel_kebenaran: ''
 }
 
+const DASAR_PEMROGRAMAN_PYTHON: Record<string, string> = {
+  instalasi: '',
+  variable: '',
+}
+
 const KALKULUS: Record<string, string> = {
   pengenalan_kalkulus: '',
   bilangan_kompleks: '',
