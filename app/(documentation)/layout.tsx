@@ -6,6 +6,7 @@ import { Banner, Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import './globals.css'
 import 'katex/dist/katex.min.css'
+import { LastUpdated } from '@/components/last-updated';
 
 export const metadata = {
   // Define your metadata here
@@ -43,7 +44,7 @@ const footer = <Footer>MIT {new Date().getFullYear()} © Fyy's Notes.</Footer>
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html
+    <html 
       // Not required, but good for SEO
       lang="id"
       // Required to be set
@@ -53,9 +54,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
     >
 
       <Head
-      // ... Your additional head options
       >
-        {/* Your additional tags should be passed as `children` of `<Head>` element */}
       </Head>
       <body>
         <Layout
@@ -67,6 +66,10 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
           copyPageButton={false}
           darkMode={false}
           sidebar={{ toggleButton: false, defaultMenuCollapseLevel: 1 }}
+          lastUpdated={<LastUpdated />}
+          feedback={{content: "Beri kami saran atau masukan", labels: "feedback"}}
+          editLink={"Edit halaman ini di Github"}
+          toc={{backToTop: "Kembali ke atas", title: "Daftar Isi Halaman"}}
 
         // ... Your additional layout options
         >
