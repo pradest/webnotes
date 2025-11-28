@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 // 1. Definisikan Base URL (Ganti dengan domain asli Anda saat deploy, misal: fyynotebook.com)
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://webnotes-fyydsz.vercel.app";
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://webnotes-fyy.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
