@@ -109,9 +109,9 @@ export default async function RootLayout({
       >
         <Layout
           banner={
-              <Banner storageKey="nextra-banner" dismissible={true}>
-                Documentation is on progress 📚
-              </Banner>
+            <Banner storageKey="koding" dismissible={true}>
+              Materi Koding akan rilis di awal Bulan Desember 📚
+            </Banner>
           }
           navbar={navbar}
           pageMap={await getPageMap()}
