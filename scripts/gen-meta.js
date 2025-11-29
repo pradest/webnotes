@@ -8,7 +8,7 @@ const metaFile = path.join(rootDir, 'git-meta.json');
 
 // DEFINISI FOLDER KONTEN
 const contentDirs = [
-  'app/(documentation)/docs',
+  'app/docs',
   'content'
 ];
 
