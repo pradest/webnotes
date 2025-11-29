@@ -91,3 +91,69 @@ Buktikan turunan <Latex>{`f(x) = x^2`}</Latex> adalah <Latex>{`2x`}</Latex> meng
   &= 2x
   \\end{aligned}
 `}</Latex>
+
+### Soal 4: Pangkat Negatif & Kombinasi
+Tentukan turunan dari <Latex>{`f(x) = 2x^{-3} + 4x^4`}</Latex>.
+
+**Penyelesaian:**
+Kita gunakan aturan pangkat untuk setiap suku. Jangan lupa, jika pangkatnya negatif, saat dikurangi 1, angkanya akan semakin "negatif" (semakin kecil).
+
+<Latex block>{`
+  \\begin{aligned}
+  f'(x) &= \\frac{d}{dx}(2x^{-3}) + \\frac{d}{dx}(4x^4) \\\\
+  &= 2 \\cdot (-3) x^{-3-1} + 4 \\cdot 4 x^{4-1} \\\\
+  &= -6x^{-4} + 16x^3
+  \\end{aligned}
+`}</Latex>
+
+Bentuk <Latex>{`-6x^{-4}`}</Latex> bisa juga ditulis sebagai <Latex>{`-\\frac{6}{x^4}`}</Latex>.
+
+---
+
+### Soal 5: Koefisien dan Pangkat Pecahan
+Tentukan turunan dari <Latex>{`f(x) = \\frac{2}{7}x^{\\frac{7}{4}}`}</Latex>.
+
+**Penyelesaian:**
+Ini terlihat rumit, tapi caranya sama persis: **Kalikan pangkat ke depan, lalu kurangi pangkat dengan 1**.
+
+1.  **Turunkan pangkatnya:** Kalikan <Latex>{`\\frac{7}{4}`}</Latex> dengan koefisien <Latex>{`\\frac{2}{7}`}</Latex>.
+2.  **Kurangi pangkatnya:** <Latex>{`\\frac{7}{4} - 1 = \\frac{7}{4} - \\frac{4}{4} = \\frac{3}{4}`}</Latex>.
+
+<Latex block>{`
+  \\begin{aligned}
+  f'(x) &= \\frac{7}{4} \\cdot \\frac{2}{7} x^{\\frac{7}{4} - 1} \\\\
+  &= \\frac{14}{28} x^{\\frac{3}{4}} \\\\
+  &= \\frac{1}{2} x^{\\frac{3}{4}}
+  \\end{aligned}
+`}</Latex>
+
+<Callout type="info" emoji="💡">
+  **Tips Pecahan:** Saat mengurangi pangkat pecahan dengan 1, cukup kurangi **pembilang** dengan **penyebut**nya.
+  Contoh: <Latex>{`\\frac{7}{4} \\to 7-4 = 3 \\to \\frac{3}{4}`}</Latex>.
+</Callout>
+
+### Soal 6: Turunan Akar Kuadrat
+Tentukan turunan dari <Latex>{`f(x) = \\sqrt{x}`}</Latex>.
+
+**Penyelesaian:**
+Langkah pertama adalah mengubah bentuk akar menjadi bentuk pangkat pecahan. Ingat bahwa <Latex>{`\\sqrt{x} = x^{1/2}`}</Latex>.
+
+Setelah itu, gunakan aturan pangkat seperti biasa:
+
+<Latex block>{`
+  \\begin{aligned}
+  f(x) &= x^{\\frac{1}{2}} \\\\
+  f'(x) &= \\frac{1}{2} \\cdot x^{\\frac{1}{2} - 1} \\\\
+  &= \\frac{1}{2} x^{-\\frac{1}{2}}
+  \\end{aligned}
+`}</Latex>
+
+Biasanya, kita diminta mengembalikan jawaban ke dalam bentuk akar agar lebih rapi. Ingat bahwa pangkat negatif berarti "satu per...", dan pangkat setengah berarti "akar".
+
+<Latex block>{`
+  f'(x) = \\frac{1}{2} \\cdot \\frac{1}{x^{1/2}} = \\frac{1}{2\\sqrt{x}}
+`}</Latex>
+
+<Callout type="info" emoji="💡">
+  **Hafalan Cepat:** Turunan dari <Latex>{`\\sqrt{x}`}</Latex> adalah <Latex>{`\\frac{1}{2\\sqrt{x}}`}</Latex>. Ini akan sering sekali kamu pakai!
+</Callout>
