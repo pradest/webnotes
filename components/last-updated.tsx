@@ -28,13 +28,13 @@ export const LastUpdated: FC<{
     const possibleKeys = [
       // --- Pola App Router (app/...) ---
       // Menangani file page.mdx di dalam folder (misal: docs/kalkulus/page.mdx atau docs/page.mdx)
-      `app/(documentation)/docs/${slug ? slug + '/' : ''}page.mdx`,
-      `app/(documentation)/docs/${slug ? slug + '/' : ''}page.md`,
+      `app/docs/${slug ? slug + '/' : ''}page.mdx`,
+      `app/docs/${slug ? slug + '/' : ''}page.md`,
       
       // Menangani file flat (misal: docs/kalkulus.mdx), hanya jika slug tidak kosong
       ...(slug ? [
-        `app/(documentation)/docs/${slug}.mdx`,
-        `app/(documentation)/docs/${slug}.md`,
+        `app/docs/${slug}.mdx`,
+        `app/docs/${slug}.md`,
       ] : []),
 
       // --- Pola Content Folder (Legacy/Fallback) ---
