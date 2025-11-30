@@ -2,9 +2,13 @@ import { MetadataRoute } from 'next'
 import fs from 'fs'
 import path from 'path'
 
-const BASE_URL = 'https://webnotes-fyy.vercel.app' 
+const BASE_URL = 'https://webnotes-fyy.vercel.app'
 
-function getMdxFiles(dir: string, fileList: string[] = [], rootDir: string = dir): string[] {
+function getMdxFiles(
+  dir: string,
+  fileList: Array<{ relativePath: string; lastModified: Date }> = [],
+  rootDir: string = dir
+): Array<{ relativePath: string; lastModified: Date }> {
   // Check if directory exists before trying to read it
   if (!fs.existsSync(dir)) {
     return fileList
@@ -20,9 +24,12 @@ function getMdxFiles(dir: string, fileList: string[] = [], rootDir: string = dir
       getMdxFiles(filePath, fileList, rootDir)
     } else {
       if (file.endsWith('.mdx') || file.endsWith('.md')) {
-        // Create relative path from the root content folder
+        // Create relative path from the root content folder and include mtime
         const relativePath = path.relative(rootDir, filePath)
-        fileList.push(relativePath)
+        fileList.push({
+          relativePath,
+          lastModified: stat.mtime,
+        })
       }
     }
   })
@@ -32,30 +39,32 @@ function getMdxFiles(dir: string, fileList: string[] = [], rootDir: string = dir
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // FIX: Point to the correct directory where your MDX files are located
-  const contentDir = path.join(process.cwd(), 'app', '(documentation)', 'docs')
-  
+  const contentDir = path.join(process.cwd(), 'app', 'docs')
+
   const allMdxFiles = getMdxFiles(contentDir)
 
-  const routes = allMdxFiles.map((file) => {
-    let slug = file
-      .replace(/\\/g, '/') 
-      .replace(/\.mdx?$/, '')
-      .replace(/\/index$/, '')
-      .replace(/\/page$/, '') // FIX: Remove '/page' from the end of the slug for App Router
+  const routes = allMdxFiles.map((fileEntry) => {
+    const file = fileEntry.relativePath
+    const lastModified = fileEntry.lastModified ?? new Date()
 
-    // Handle the root docs page (usually page.mdx at the root of docs folder)
-    if (slug === '' || slug === 'index') {
-        return {
-            url: `${BASE_URL}/docs`,
-            lastModified: new Date(),
-            changeFrequency: 'weekly' as const,
-            priority: 1,
-        }
+    let slug = file
+      .replace(/\\/g, '/')
+      .replace(/\.mdx?$/, '')
+      .replace(/(^|\/)(index|page)$/, '') // Remove trailing 'index' or 'page' including root
+
+    // Handle the root docs page (usually page.mdx or index.mdx at the root of docs folder)
+    if (slug === '') {
+      return {
+        url: `${BASE_URL}/docs`,
+        lastModified,
+        changeFrequency: 'weekly' as const,
+        priority: 1,
+      }
     }
 
     return {
       url: `${BASE_URL}/docs/${slug}`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     }
@@ -64,7 +73,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     {
       url: BASE_URL,
-      lastModified: new Date(),
+      lastModified: fs.existsSync(path.join(process.cwd(), 'app', 'layout.tsx'))
+        ? fs.statSync(path.join(process.cwd(), 'app', 'layout.tsx')).mtime
+        : new Date(),
       changeFrequency: 'yearly' as const,
       priority: 1,
     },
