@@ -4,15 +4,15 @@
 @variant dark (&:where(.dark, .dark *));
 
 @layer base {
-  html::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-    background: transparent;
-  }
+    html::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        background: transparent;
+    }
 
-  html,
-  body {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
+    html,
+    body {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
 }
