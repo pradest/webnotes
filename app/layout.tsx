@@ -145,7 +145,7 @@ export default async function RootLayout({
       >
         <Layout
           banner={
-            <Banner storageKey="koding" dismissible={true}>
+            <Banner storageKey="koding-released" dismissible={true}>
               Materi Dasar Pemrograman Python Telah Dirilis📚📖
             </Banner>
           }
