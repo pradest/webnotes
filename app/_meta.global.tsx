@@ -24,25 +24,18 @@ const KALKULUS: Record<string, string> = {
   turunan: "",
 };
 
-const DOCS_ITEMS: Record<
-  string,
-  string | { title: string; items: Record<string, string> }
-> = {
+const DOCS_ITEMS: Record<string, string | { items: Record<string, string> }> = {
   tentang: "",
   bahasa_indonesia: {
-    title: "Bahasa Indonesia",
     items: BAHASA_INDONESIA,
   },
   logika_matematika: {
-    title: "Logika Matematika",
     items: LOGIKA_MATEMATIKA,
   },
   kalkulus: {
-    title: "Kalkulus",
     items: KALKULUS,
   },
   dasar_pemrograman_python: {
-    title: "Dasar Pemrograman Python",
     items: DASAR_PEMROGRAMAN_PYTHON,
   },
 };
