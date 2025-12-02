@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-  const BASE_URL = 'https://webnotes-fyy.vercel.app' // Ganti domain
+  const BASE_URL = 'https://noteskampus.xyz' // Ganti domain
 
   return {
     rules: {
