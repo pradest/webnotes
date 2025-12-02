@@ -1,8 +1,8 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from 'next';
 import fs from 'fs'
 import path from 'path'
 
-const BASE_URL = 'https://webnotes-fyy.vercel.app'
+const BASE_URL = 'https://noteskampus.xyz'
 
 function getMdxFiles(
   dir: string,
