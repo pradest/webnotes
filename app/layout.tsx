@@ -31,9 +31,6 @@ export const metadata: Metadata = {
   },
   description:
     "Digital Garden & Dokumentasi pribadi M.Raffi Pra Diestyawan. Catatan belajar pemrograman, kalkulus, dan bahasa Indonesia.",
-  verification: {
-    google: "3ueHVA0Djja_8A2wnxLQ9Dvv3RmhPaDG4-bWSaUUhL0",
-  },
   applicationName: "Fyy's Notebook",
   authors: [
     { name: "M.Raffi Pra Diestyawan", url: "https://github.com/fyydsz" },
