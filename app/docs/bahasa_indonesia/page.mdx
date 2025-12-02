@@ -5,6 +5,8 @@ description: Materi lengkap mengenai Sejarah, Kedudukan, dan Fungsi Bahasa Indon
 ---
 
 import { Cards } from "nextra/components";
+import { compileMdx } from 'nextra/compile'
+import { MDXRemote } from 'nextra/mdx-remote'
 
 # Bahasa Indonesia
 
@@ -14,10 +16,10 @@ Selamat datang di materi **Bahasa Indonesia**. Bagian ini merangkum poin-poin pe
 
 Silakan pilih topik di bawah ini untuk mempelajarinya lebih lanjut:
 
-<Cards>
+<Cards className="">
   <Cards.Card
     icon="📜"
-    title="Sejarah Bahasa Indonesia"
+    title="Sejarah Bahasa"
     href="/docs/bahasa_indonesia/sejarah_bahasa_indonesia"
     arrow
   />
@@ -28,6 +30,7 @@ Silakan pilih topik di bawah ini untuk mempelajarinya lebih lanjut:
     arrow
   />
   <Cards.Card
+    className="h-full"
     icon="✍️"
     title="Diksi"
     href="/docs/bahasa_indonesia/diksi"
@@ -55,7 +58,9 @@ Silakan pilih topik di bawah ini untuk mempelajarinya lebih lanjut:
 
 ---
 
-### 💡 Tahukah Kamu?
+<MDXRemote
+  compiledSource={await compileMdx('### 💡 Tahukah Kamu')}
+/>
 Bahasa Indonesia lahir dari **Bahasa Melayu Riau** yang dipilih karena sifatnya
 yang egaliter (tidak mengenal tingkatan bahasa) dan sudah lama menjadi *lingua
 franca* di Nusantara.
