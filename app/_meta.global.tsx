@@ -9,6 +9,7 @@ const BAHASA_INDONESIA: Record<string, string> = {
 
 const LOGIKA_MATEMATIKA: Record<string, string> = {
   proposisi: "",
+  operator_logika: "",
   tabel_kebenaran: "",
   ekuivalen_logis: "",
   proposisi_majemuk: "",
