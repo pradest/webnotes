@@ -315,4 +315,105 @@ html:not(.dark) {
     filter: drop-shadow(0 0 8px var(--st-blue-base));
     transform: scale(1.1);
   }
+
+  /* --- BANNER THEME (STRANGER THINGS) --- */
+
+  /* Override semua default Nextra banner styles */
+  .nextra-banner,
+  .nextra-banner * {
+    background: transparent !important;
+    border: none !important;
+  }
+
+  /* Banner container Light Mode */
+  .nextra-banner {
+    background: linear-gradient(
+      to right,
+      rgb(254, 226, 226),
+      rgb(252, 231, 243)
+    ) !important;
+    border-bottom: 2px solid rgb(248, 113, 113) !important;
+    color: rgb(127, 29, 29) !important;
+    box-shadow: 0 4px 6px -1px rgba(220, 20, 60, 0.25) !important;
+  }
+
+  /* Banner container Dark Mode */
+  html.dark .nextra-banner {
+    background: linear-gradient(
+      to right,
+      rgb(15, 23, 42),
+      rgb(23, 37, 84)
+    ) !important;
+    border-bottom: 2px solid rgba(59, 130, 246, 0.3) !important;
+    color: rgb(219, 234, 254) !important;
+    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.2) !important;
+  }
+
+  /* Override text colors inside banner */
+  .nextra-banner,
+  .nextra-banner > div {
+    color: inherit !important;
+  }
+
+  /* Banner links Light Mode */
+  .nextra-banner a {
+    color: rgb(153, 27, 27) !important;
+    text-decoration: underline !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .nextra-banner a:hover {
+    color: rgb(127, 29, 29) !important;
+    filter: drop-shadow(0 0 8px rgba(220, 20, 60, 0.7)) !important;
+  }
+
+  /* Banner links Dark Mode */
+  html.dark .nextra-banner a {
+    color: rgb(147, 197, 253) !important;
+  }
+
+  html.dark .nextra-banner a:hover {
+    color: rgb(219, 234, 254) !important;
+    filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.8)) !important;
+  }
+
+  /* Close Button Light Mode */
+  .nextra-banner button[aria-label="Dismiss banner"],
+  .nextra-banner button[aria-label="Dismiss banner"] * {
+    color: hsl(355, 70%, 50%) !important;
+    background: transparent !important;
+    border: none !important;
+    opacity: 0.7 !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .nextra-banner button[aria-label="Dismiss banner"]:hover,
+  .nextra-banner button[aria-label="Dismiss banner"]:hover * {
+    color: hsl(355, 85%, 45%) !important;
+    opacity: 1 !important;
+    filter: drop-shadow(0 0 6px rgba(220, 20, 60, 0.6)) !important;
+    transform: scale(1.1) !important;
+  }
+
+  /* Close Button Dark Mode */
+  html.dark .nextra-banner button[aria-label="Dismiss banner"],
+  html.dark .nextra-banner button[aria-label="Dismiss banner"] * {
+    color: hsl(205, 90%, 70%) !important;
+    opacity: 0.7 !important;
+  }
+
+  html.dark .nextra-banner button[aria-label="Dismiss banner"]:hover,
+  html.dark .nextra-banner button[aria-label="Dismiss banner"]:hover * {
+    color: hsl(205, 100%, 80%) !important;
+    opacity: 1 !important;
+    filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.8)) !important;
+    transform: scale(1.1) !important;
+  }
+
+  /* SVG icon di dalam button */
+  .nextra-banner button[aria-label="Dismiss banner"] svg {
+    width: 1.25rem !important;
+    height: 1.25rem !important;
+  }
 }

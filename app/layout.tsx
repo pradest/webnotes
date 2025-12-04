@@ -26,12 +26,12 @@ const BASE_URL = "https://bukukampus.xyz/";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Fyy's Notebook",
-    template: "%s | Fyy's Notebook",
+    default: "Buku Kampus",
+    template: "%s | Buku Kampus",
   },
   description:
     "Digital Garden & Dokumentasi pribadi M.Raffi Pra Diestyawan. Catatan belajar pemrograman, kalkulus, dan bahasa Indonesia.",
-  applicationName: "Fyy's Notebook",
+  applicationName: "Buku Kampus",
   authors: [
     { name: "M.Raffi Pra Diestyawan", url: "https://github.com/fyydsz" },
   ],
@@ -49,8 +49,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "id_ID",
     url: BASE_URL,
-    siteName: "Fyy's Notebook",
-    title: "Fyy's Notebook - Catatan Belajar Terstruktur",
+    siteName: "Buku Kampus",
+    title: "Buku Kampus - Catatan Belajar Terstruktur",
     description:
       "Kumpulan materi kuliah dan tutorial koding yang disusun rapi.",
     images: [
@@ -58,13 +58,13 @@ export const metadata: Metadata = {
         url: "/image.png",
         width: 1200,
         height: 630,
-        alt: "Fyy's Notebook Banner",
+        alt: "Buku Kampus Banner",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fyy's Notebook",
+    title: "Buku Kampus",
     description: "Catatan belajar dan dokumentasi kuliah.",
     creator: "@fyydsz_",
     images: ["/image.png"],
@@ -106,7 +106,7 @@ const navbar = (
           <rect width="16" height="20" x="4" y="2" rx="2" />
           <path d="M16 2v20" />
         </svg>
-        <b>Fyy&apos;s Notebook</b>
+        <b>Buku Kampus</b>
       </div>
     }
     logoLink="/"
@@ -143,16 +143,16 @@ export default async function RootLayout({
         <Layout
           banner={
             <Banner storageKey="support-campaign-01" dismissible={true}>
-              Suka dengan catatan ini?
+              <span className="font-bold">Suka dengan catatan ini?</span>
               <a
                 href="https://saweria.co/fyyy"
                 target="_blank"
                 rel="noreferrer"
-                className="underline font-semibold ml-1 hover:opacity-80"
+                className="ml-1"
               >
                 Dukung Fyy di sini.
               </a>
-              🎁
+              <span className="ml-1 animate-pulse">🎁</span>
             </Banner>
           }
           navbar={navbar}
@@ -169,7 +169,7 @@ export default async function RootLayout({
           toc={{ backToTop: "Kembali ke atas", title: "Daftar Isi Halaman" }}
         >
           {children}
-          <Footer>{new Date().getFullYear()} © Fyy&apos;s Notebook.</Footer>
+          <Footer>{new Date().getFullYear()} © Buku Kampus.</Footer>
         </Layout>
       </body>
     </html>
