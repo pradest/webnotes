@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 });
 
 // --- Konfigurasi SEO (Dari Landing Page) ---
-const BASE_URL = "https://bukukampus.xyz/";
+const BASE_URL = "https://bukukampus.xyz";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -79,6 +79,9 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
+  },
+  alternates: {
+    canonical: BASE_URL,
   },
 };
 
