@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 });
 
 // --- Konfigurasi SEO (Dari Landing Page) ---
-const BASE_URL = "https://webnotes-fyy.vercel.app";
+const BASE_URL = "https://bukukampus.xyz/";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -41,6 +41,7 @@ export const metadata: Metadata = {
     "Next.js",
     "Nextra",
     "Catatan Kuliah",
+    "Catatan Kampus",
     "Teknik Informatika",
   ],
   creator: "M.Raffi Pra Diestyawan",
@@ -122,7 +123,7 @@ const navbar = (
         </svg>
       </div>
     }
-    projectLink={"https://github.com/fyydsz/webnotes/tree/master"}
+    projectLink={"https://github.com/fyydsz/webnotes"}
   >
     <ThemeToggle />
   </Navbar>
@@ -141,15 +142,24 @@ export default async function RootLayout({
       >
         <Layout
           banner={
-            <Banner storageKey="koding-released" dismissible={true}>
-              Materi Dasar Pemrograman Python Telah Dirilis📚📖
+            <Banner storageKey="support-campaign-01" dismissible={true}>
+              Suka dengan catatan ini?
+              <a
+                href="https://saweria.co/fyyy"
+                target="_blank"
+                rel="noreferrer"
+                className="underline font-semibold ml-1 hover:opacity-80"
+              >
+                Dukung Fyy di sini.
+              </a>
+              🎁
             </Banner>
           }
           navbar={navbar}
           pageMap={await getPageMap()}
           docsRepositoryBase="https://github.com/fyydsz/webnotes/tree/master"
           copyPageButton={false}
-          sidebar={{ toggleButton: true, defaultMenuCollapseLevel: 2 }}
+          sidebar={{ toggleButton: true, defaultMenuCollapseLevel: 1 }}
           lastUpdated={<LastUpdated />}
           feedback={{
             content: "Beri kami saran atau masukan",

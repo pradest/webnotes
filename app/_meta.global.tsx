@@ -55,6 +55,11 @@ const ROUTES = {
     type: "page",
     items: DOCS_ITEMS,
   },
+  support: {
+    title: "Support",
+    type: "page",
+    href: "https://saweria.co/fyyy",
+  },
 };
 
 export default ROUTES;
