@@ -6,11 +6,11 @@ description: Cara mengkombinasikan proposisi atomik, ekspresi logika, analisis P
 import { Callout } from 'nextra/components'
 import { Latex } from "@/components/latex"
 
-# 🗣️ Proposisi Majemuk
+# Proposisi Majemuk
 
 **Proposisi Majemuk** adalah proposisi yang dibentuk dengan menggabungkan satu atau lebih **proposisi atomik** (kalimat tunggal) menggunakan **perangkai logika** (*logical connectives*).
 
-## 💡 Ekspresi Logika
+## Ekspresi Logika
 
 **Ekspresi Logika** adalah representasi formal dari sebuah pernyataan atau argumen menggunakan variabel proposisional dan perangkai logika.
 
@@ -31,7 +31,7 @@ Diberikan pernyataan:
 
 Ekspresi yang lebih tepat adalah <Latex>{`A \\to (B \\wedge C)`}</Latex>, karena <Latex>{`B`}</Latex> dan <Latex>{`C`}</Latex> **keduanya** merupakan akibat dari <Latex>{`A`}</Latex>.
 
-## 🌳 Menganalisis Proposisi Majemuk (Parsing)
+## Menganalisis Proposisi Majemuk (Parsing)
 Untuk proposisi majemuk yang sangat panjang, kita dapat menggunakan teknik **Parsing** untuk memilah-milah kalimat menjadi proposisi atomik dan menentukan struktur logisnya.
 
 ### Contoh: Analisis Kalimat Kompleks
@@ -44,11 +44,11 @@ Pernyataan:
 
 ---
 
-## 📚Klasifikasi Proposisi Majemuk
+## Klasifikasi Proposisi Majemuk
 
 Proposisi majemuk dapat diklasifikasikan menjadi tiga jenis berdasarkan hasil nilai kebenaran pada kolom terakhir di tabel kebenaran: Tautologi, Kontradiksi, dan Kontingensi.
 
-### 1. ✅ Tautologi
+### 1. Tautologi
 **Tautologi** adalah proposisi majemuk yang **selalu bernilai Benar (T)**, terlepas dari nilai kebenaran proposisi-proposisi atomik penyusunnya.
 
 * Jika kolom terakhir tabel kebenaran untuk semua pasangan nilai variabel bernilai Benar (<Latex>{`T`}</Latex>), maka itu adalah Tautologi.
@@ -61,7 +61,7 @@ Proposisi majemuk dapat diklasifikasikan menjadi tiga jenis berdasarkan hasil ni
 | T | F | **T** |
 | **Hasil** | | **Tautologi** |
 
-### 2. ❌ Kontradiksi
+### 2. Kontradiksi
 **Kontradiksi** adalah proposisi majemuk yang **selalu bernilai Salah (F)**, terlepas dari nilai kebenaran proposisi penyusunnya.
 
 * Ini adalah kebalikan dari tautologi.
@@ -75,7 +75,7 @@ Proposisi majemuk dapat diklasifikasikan menjadi tiga jenis berdasarkan hasil ni
 | T | F | **F** |
 | **Hasil** | | **Kontradiksi** |
 
-### 3. ❓ Kontingensi (*Contingent*)
+### 3. Kontingensi
 **Kontingensi** adalah proposisi majemuk yang bukan Tautologi dan bukan Kontradiksi.
 
 * Ekspresi logika ini akan menghasilkan nilai **Benar (T)** dan nilai **Salah (F)** dalam kolom terakhir tabel kebenarannya.
