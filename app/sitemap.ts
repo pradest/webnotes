@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import fs from 'fs'
 import path from 'path'
 
-const BASE_URL = 'https://noteskampus.xyz'
+const BASE_URL = 'https://bukukampus.xyz'
 
 function getMdxFiles(
   dir: string,
