@@ -20,6 +20,9 @@ const LOGIKA_MATEMATIKA: Record<string, string> = {
 const DASAR_PEMROGRAMAN_PYTHON: Record<string, string> = {
   install_python: "",
   sintaks_dasar: "",
+  operator_aritmatika: "",
+  percabangan: "",
+  perulangan: "",
 };
 
 const KALKULUS: Record<string, string> = {
