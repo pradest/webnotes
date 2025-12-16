@@ -1,6 +1,6 @@
 {
   "name": "bukukampus",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "private": true,
   "scripts": {
     "prepost": "node scripts/gen-meta.js",
