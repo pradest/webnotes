@@ -151,11 +151,11 @@ export default async function RootLayout({
                 href="https://saweria.co/fyyy"
                 target="_blank"
                 rel="noreferrer"
-                className="ml-1"
+                className="ml-1 underline"
               >
-                Dukung Fyy di sini.
+                Dukung Fyy di sini
               </a>
-              <span className="ml-1 animate-pulse">🎁</span>
+              <span className="ml-1">🎁</span>
             </Banner>
           }
           navbar={navbar}
